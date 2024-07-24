@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply bg-linear text-xl leading-tight text-primary;
+    @apply bg-linear text-xl leading-tight text-primary bg-no-repeat;
 }
