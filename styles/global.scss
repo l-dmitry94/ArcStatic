@@ -1,7 +1,9 @@
+@import "./fonts";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    @apply bg-linear text-xl leading-tight text-primary bg-no-repeat;
+    @apply font-riviera bg-linear bg-no-repeat leading-tight text-primary;
 }

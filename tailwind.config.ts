@@ -17,6 +17,9 @@ const config: Config = {
             lineHeight: {
                 tight: '1.3',
             },
+            fontFamily: {
+                riviera: ['AltRiviera', 'sans-serif'],
+            },
             screens: {
                 mobile: '375px',
                 tablet: '768px',

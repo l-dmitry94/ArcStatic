@@ -1,5 +1,9 @@
 const Home = () => {
-    return <main>ArcStatic</main>;
+    return (
+        <>
+            <main>ArcStatic</main>
+        </>
+    );
 };
 
 export default Home;
