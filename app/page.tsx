@@ -7,14 +7,14 @@ const Home = () => {
         <>
             <main>ArcStatic</main>
             <Button
-                onSubmit={() => alert('Hello')}
+                onClick={() => alert('Hello')}
                 text={'Book a consultation'}
-                type={ButtonType.SECONDARY}
+                buttonType={ButtonType.SECONDARY}
             />
             <Button
-                onSubmit={() => alert('Hello')}
+                onClick={() => alert('Hello')}
                 text={'Book a consultation'}
-                type={ButtonType.DEFAULT}
+                buttonType={ButtonType.DEFAULT}
             />
         </>
     );
