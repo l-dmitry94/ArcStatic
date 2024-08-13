@@ -9,22 +9,18 @@ export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     text: string;
     buttonType?: ButtonType;
-    onClick: () => void;
 }
 
-export const Button: FC<ButtonProps> = ({
-    text,
-    onClick,
-    buttonType,
-    ...props
-}) => {
+const Button: FC<ButtonProps> = ({ text, buttonType, ...props }) => {
     const buttonStyles = classNames(
         styles.button,
         styles[`button--${buttonType}`]
     );
     return (
-        <button className={buttonStyles} onClick={onClick} {...props}>
+        <button className={buttonStyles} {...props}>
             {text}
         </button>
     );
 };
+
+export default Button;
