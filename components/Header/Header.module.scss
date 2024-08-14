@@ -1,3 +1,23 @@
+@import '/styles/mixins';
+
 .header {
-    @apply text-base;
+    @apply pb-5 pt-5 text-base notebook:pb-10 notebook:pt-10;
+
+    & div {
+        @apply flex size-full items-center justify-between;
+    }
+}
+
+.img {
+    @apply h-14 w-14 notebook:h-32 notebook:w-32;
+}
+
+.imgBurger {
+    @apply h-6 w-10;
+}
+.btnClose {
+    @apply absolute right-5 top-3 h-10 w-10 bg-transparent;
+}
+.svgClose {
+    @apply fill-violet h-6 w-6;
 }

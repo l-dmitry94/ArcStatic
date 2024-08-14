@@ -1,0 +1,15 @@
+.navMenu {
+    @apply text-center font-riviera text-base;
+
+    & ul li a {
+        @apply size-4 text-xl font-medium hover:text-2xl;
+    }
+
+    &.visible ul {
+        @apply hover:via-violet focus:via-violet flex h-screen w-screen flex-col gap-5 p-12 text-primary;
+    }
+}
+
+.navList {
+    @apply hidden notebook:flex notebook:gap-10;
+}
