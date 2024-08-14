@@ -1,5 +1,29 @@
 @import 'styles/mixins';
 
 .input {
-  @apply bg-transparent outline-none border-b-2 border-red-500 w-full;
+  @apply bg-transparent  outline-none border-b-[0.5px] border-white w-full opacity-100 py-[5px] px-[5px] mb-[40px];
+}
+
+.textArea {
+  @apply bg-transparent outline-none border-b-[0.5px] border-white w-full resize-none pt-[5px] px-[5px] h-[70px];
+}
+
+.fieldWrapper {
+  @apply relative;
+}
+
+.label {
+  @apply text-[14px] leading-[1.28] tracking-[0.05em] text-white font-thin absolute top-[-25px] left-0;
+}
+
+
+.input:not(last-child) {
+  @apply mb-[40px];
+}
+
+.buttonWrapper {
+}
+
+.spanError {
+  @apply absolute top-0 left-1/2 translate-x-[-50%] text-red-500 font-bold ;
 }

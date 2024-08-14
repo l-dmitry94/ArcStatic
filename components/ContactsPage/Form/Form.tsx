@@ -4,6 +4,11 @@ import Button, { ButtonType } from '@/components/Button';
 import styles from './form.module.scss';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { CustomInput } from '@/components/ContactsPage/CustomInput/CustomInput';
+import {
+    emailPattern,
+    numberPattern,
+} from '@/components/ContactsPage/constants';
 
 interface FormValues {
     name: string;
@@ -15,7 +20,11 @@ interface FormValues {
 export interface FormProps {}
 
 export const Form = ({}: FormProps) => {
-    const { register, handleSubmit } = useForm<FormValues>();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<FormValues>();
 
     const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
         console.log(data);
@@ -23,42 +32,46 @@ export const Form = ({}: FormProps) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.fieldWrapper}>
-                <label htmlFor="name">Name</label>
-                <input
-                    className={styles.input}
-                    id="name"
-                    {...register('name', { required: 'Name is required' })}
-                />
-            </div>
-
-            <div className={styles.fieldWrapper}>
-                <label htmlFor="number">Number</label>
-                <input
-                    className={styles.input}
-                    type="text"
-                    id="number"
-                    {...register('number', { required: 'Number is required' })}
-                />
-            </div>
-            <div className={styles.fieldWrapper}>
-                <label htmlFor="email">Email</label>
-                <input
-                    className={styles.input}
-                    type="text"
-                    id="email"
-                    {...register('email', { required: 'Email is required' })}
-                />
-            </div>
-            <div className={styles.fieldWrapper}>
-                <label htmlFor="message">Message</label>
-                <textarea
-                    className={styles.input}
-                    {...register('message', { required: 'Email is required' })}
-                />
-            </div>
+            <CustomInput
+                id={'name'}
+                label={'Name'}
+                register={register}
+                errors={errors}
+            />
+            <CustomInput
+                label={'Number'}
+                id={'number'}
+                register={register}
+                errors={errors}
+                pattern={numberPattern}
+            />
+            <CustomInput
+                label={'Email'}
+                id={'email'}
+                errors={errors}
+                register={register}
+                pattern={emailPattern}
+            />
+            <CustomInput
+                label={'Message'}
+                id={'message'}
+                register={register}
+                errors={errors}
+            />
+            {/*<div className={styles.fieldWrapper}>*/}
+            {/*    <label className={styles.label} htmlFor="message">*/}
+            {/*        Message*/}
+            {/*    </label>*/}
+            {/*    <textarea*/}
+            {/*        className={styles.textArea}*/}
+            {/*        {...register('message', { required: 'Email is required' })}*/}
+            {/*    />*/}
+            {/*</div>*/}
             <div className={styles.buttonWrapper}>
                 <Button text={'Send message'} buttonType={ButtonType.DEFAULT} />
+                <p className="py-[10px] text-center text-[24px] font-thin">
+                    or
+                </p>
                 <Button
                     text={'Telegram bot'}
                     buttonType={ButtonType.SECONDARY}
