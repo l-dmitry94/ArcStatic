@@ -6,33 +6,17 @@ import { ButtonType } from '@/components/Button/constants';
 import styles from './Hero.module.scss';
 
 const Hero: React.FC = () => {
-  const { paragraph1, paragraph2 } = heroContent as HeroContent;
-
-  const titleLines = [
-    "EXPERT",
-    "IN NAVIGATION",
-    "WEB",
-    "DEVELOPMENT"
-  ];
+  const { title, paragraph1, paragraph2 } = heroContent as HeroContent;
 
   return (
-    <section className={`${styles.hero} bg-cover bg-center bg-no-repeat md:bg-contain md:bg-top`}>
-      <div className={`${styles.hero_container} max-w-7xl mx-auto`}>
-        <h1 className={styles.hero_title}>
-          {titleLines.map((line, index) => (
-            <div
-              key={index}
-              className={`${styles.hero_title_line} ${line === "IN NAVIGATION" ? 'some-custom-class' : ''}`}
-            >
-              {line}
-            </div>
-          ))}
-        </h1>
-        <div className={styles.hero_text}>
-          <p>{paragraph1}</p>
-          <p>{paragraph2}</p>
+    <section className={`${styles.hero}`}>
+      <div className={`${styles.hero_container}`}>
+        <h1 className={`${styles.hero_title}`} dangerouslySetInnerHTML={{ __html: title }} />
+        <div className={`${styles.hero_text}`}>
+          <div><p>{paragraph1}</p></div>
+          <div><p>{paragraph2}</p></div>
         </div>
-        <div className={styles.hero_buttonContainer}>
+        <div className={`${styles.hero_buttonContainer}`}>
           <Button text="book a consultation" buttonType={ButtonType.DEFAULT} />
         </div>
       </div>

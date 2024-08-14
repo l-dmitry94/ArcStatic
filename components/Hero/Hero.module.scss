@@ -21,8 +21,8 @@
         @apply text-primary font-riviera text-2xl font-light leading-relaxed tracking-wide text-center;
 
         @include media-rules(mobile) {
-            font-size: 24px;
-            line-height: 1.2;
+            font-size: 42px;
+            line-height: 1.5;
             max-width: 335px;
         }
 
@@ -32,12 +32,8 @@
         }
     }
 
-    &_title_line {
-        @apply flex justify-center items-center;
-    }
-
     &_text {
-        @apply text-left max-w-prose text-base font-light text-primary font-riviera leading-relaxed text-justify gap-5;
+        @apply flex flex-col text-left max-w-prose text-base font-light text-primary font-riviera leading-relaxed text-justify gap-5;
 
         @include media-rules(mobile) {
             max-width: 335px;
