@@ -1,14 +1,17 @@
 import { ContactsPage } from '@/components/ContactsPage/ContactsPage';
-import Container from '@/components/Container';
+import Container from '../components/Container';
+import Hero from '../components/Hero';
 
 const Home = () => {
     return (
-        <Container>
-            <main>
-                ArcStatic
-                <ContactsPage />
-            </main>
-        </Container>
+        <>
+            <Container>
+                <main>
+                    <Hero />
+                    <ContactsPage />
+                </main>
+            </Container>
+        </>
     );
 };
 
