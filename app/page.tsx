@@ -1,8 +1,14 @@
+import { ContactsPage } from '@/components/ContactsPage/ContactsPage';
+import Container from '@/components/Container';
+
 const Home = () => {
     return (
-        <>
-            <main>ArcStatic</main>
-        </>
+        <Container>
+            <main>
+                ArcStatic
+                <ContactsPage />
+            </main>
+        </Container>
     );
 };
 
