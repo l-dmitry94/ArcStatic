@@ -1,7 +1,14 @@
+import Container from '../components/Container';
+import Hero from '../components/Hero';
+
 const Home = () => {
     return (
         <>
-            <main>ArcStatic</main>
+            <Container>
+                <main>
+                    <Hero />
+                </main>
+            </Container>
         </>
     );
 };
