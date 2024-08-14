@@ -1,38 +1,17 @@
-@import '/styles/mixins';
+@import 'styles/mixins.scss';
 
 .button {
-  display: inline-block;
-  padding: 19px 36px;
-  margin: 4px;
-  border-radius: 20px;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.1;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  @apply inline-block py-[19px] w-full m-[4px] rounded-[20px] font-extrabold text-[20px] leading-[1.1] tracking-[0.05em] uppercase;
+
+  @include media-rules(desktop) {
+    @apply py-[32px] px-[41px] w-auto;
+  }
 
   &--default {
-    background: linear-gradient(200deg, #b069c7 21.99%, #5a2e70 60.72%, #1f1027 91.9%);
+    @apply bg-buttonBG;
   }
 
   &--custom {
-    background: transparent;
-    border: 1px solid #b069c7;
-  }
-
-  @include media-rules(tablet) {
-    padding: 20px 28px;
-    font-size: 24px;
-  }
-
-  @include media-rules(notebook) {
-    padding: 24px 32px;
-    font-size: 28px;
-  }
-
-  @include media-rules(desktop) {
-    padding: 32px 41px;
-    font-size: 32px;
-    line-height: 1.1;
+    @apply bg-transparent border-[1px] border-secondary;
   }
 }

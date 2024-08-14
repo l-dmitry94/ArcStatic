@@ -1,3 +1,4 @@
+import { ContactsPage } from '@/components/ContactsPage/ContactsPage';
 import Container from '../components/Container';
 import Hero from '../components/Hero';
 
@@ -7,6 +8,7 @@ const Home = () => {
             <Container>
                 <main>
                     <Hero />
+                    <ContactsPage />
                 </main>
             </Container>
         </>
