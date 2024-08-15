@@ -14,6 +14,8 @@ const config: Config = {
             },
             backgroundImage: {
                 linear: 'linear-gradient(63deg, #000 49.82%, #2442ab 100%)',
+                buttonBG:
+                    'linear-gradient(200deg, #b069c7 21.99%, #5a2e70 60.72%, #1f1027 91.9%)',
             },
             lineHeight: {
                 tight: '1.3',
