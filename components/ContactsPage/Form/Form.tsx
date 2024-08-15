@@ -17,16 +17,14 @@ interface FormValues {
     message: string;
 }
 
-export interface FormProps {}
-
-export const Form = ({}: FormProps) => {
+const Form = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm<FormValues>();
 
-    const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
+    const onSubmit: SubmitHandler<FormValues> = (data) => {
         console.log(data);
     };
 
@@ -59,15 +57,6 @@ export const Form = ({}: FormProps) => {
                     register={register}
                     errors={errors}
                 />
-                {/*<div className={styles.fieldWrapper}>*/}
-                {/*    <label className={styles.label} htmlFor="message">*/}
-                {/*        Message*/}
-                {/*    </label>*/}
-                {/*    <textarea*/}
-                {/*        className={styles.textArea}*/}
-                {/*        {...register('message', { required: 'Email is required' })}*/}
-                {/*    />*/}
-                {/*</div>*/}
                 <div className={styles.buttonWrapper}>
                     <Button
                         text={'Send message'}
@@ -82,3 +71,5 @@ export const Form = ({}: FormProps) => {
         </div>
     );
 };
+
+export default Form;

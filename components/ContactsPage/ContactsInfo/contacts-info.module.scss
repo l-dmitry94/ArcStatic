@@ -1,7 +1,7 @@
 @import 'styles/mixins.scss';
 
 .wrapper {
-  height: 335px;
+  @apply h-[500px];
   background-image: url('/images/contact_bg.png');
   background-size: cover;
   background-position: center;
@@ -19,7 +19,11 @@
 
 
 .titleWrapper {
-  @apply flex gap-[8px] items-end justify-center pb-[40px];
+  @apply flex gap-[8px] items-end justify-center pb-[40px] hidden;
+
+  @include media-rules(desktop) {
+    @apply flex;
+  }
 }
 
 .title {
