@@ -35,7 +35,13 @@ const BurgerMenu: FC = () => {
     return (
         <>
             {!isNotebook && !isDesktop && (
-                <Button onClick={toggleDrawer}>
+                <Button
+                    onClick={toggleDrawer}
+                    sx={{
+                        minWidth: '40px',
+                        padding: '0',
+                    }}
+                >
                     <Image
                         src={burgerMenu}
                         alt="Burger Menu"
