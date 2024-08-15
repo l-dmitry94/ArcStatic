@@ -1,21 +1,17 @@
 @import '/styles/mixins';
 
 .hero {
-    @apply py-16 bg-cover bg-no-repeat;
-
-    background-image: url('/images/blot4x.png');
-    background-position: center;
+    @apply py-16 bg-cover bg-no-repeat bg-center bg-[url('/images/blot4x.png')];
 
     @include media-rules(mobile) {
-        background-size: contain;
-        background-position: top;
+        @apply bg-top bg-contain;
     }
 
     &_container {
-        @apply flex flex-col items-center gap-5;
+        @apply flex flex-col gap-5;
 
         @include media-rules(desktop) {
-            @apply items-start;
+            @apply items-start flex-row justify-between;
         }
     }
 
@@ -23,15 +19,14 @@
         @apply flex flex-col text-left max-w-prose text-base font-light text-primary font-riviera leading-relaxed gap-5;
 
         @include media-rules(mobile) {
-            max-width: 335px;
+            @apply max-w-[335px];
         }
 
         @include media-rules(desktop) {
-            @apply gap-10 items-start;
+            @apply gap-24;
 
             p:first-of-type {
-                font-size: 20px;
-                @apply order-1;
+                @apply order-1 text-[20px] text-justify max-w-[326px];
             }
 
             h1 {
@@ -39,30 +34,30 @@
             }
 
             p:last-of-type {
-                font-size: 20px;
-                @apply order-3;
+                @apply order-3 text-[20px] text-justify max-w-[326px];
             }
         }
     }
 
     &_title {
-        @apply text-primary font-riviera text-2xl font-light leading-normal tracking-wide text-center;
+        @apply text-primary font-riviera text-2xl font-light leading-normal tracking-wide text-center text-[42px];
 
         @include media-rules(mobile) {
-            font-size: 42px;
-            max-width: 335px;
             order: -1;
         }
 
         @include media-rules(desktop) {
-            @apply flex flex-wrap justify-start text-left tracking-wider;
-            font-size: 128px;
+            @apply text-left tracking-wider text-[128px] order-2;
             line-height: 1.0;
-            order: 2;
         }
     }
 
     &_buttonContainer {
         @apply text-center;
+
+        @include media-rules(desktop) {
+            @apply text-right mt-auto;
+            
+        }
     }
 }
