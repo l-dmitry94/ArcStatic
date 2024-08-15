@@ -1,8 +1,8 @@
 'use client';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
 import { useMedia } from '@/hooks/useMedia';
 import { SelectChangeEvent } from '@mui/material';
+import { useRouter } from 'next/navigation';
 
 const LangSwitchMobile = dynamic(
     () => import('./LangSwithMobile/LangSwithMobile'),
@@ -13,19 +13,19 @@ const LangSwitchDesktop = dynamic(() => import('./LangSwitchDesktop'), {
 });
 
 const LangSwitch = () => {
-    const [lang, setLang] = useState<'ua' | 'en'>('en');
     const { isNotebook, isDesktop } = useMedia();
+    const router = useRouter();
 
     const handleChange = (event: SelectChangeEvent) => {
-        setLang(event.target.value as 'ua' | 'en');
+        router.push(`/${event.target.value}`);
     };
 
     return (
         <>
             {!isNotebook && !isDesktop ? (
-                <LangSwitchMobile lang={lang} handleChange={handleChange} />
+                <LangSwitchMobile handleChange={handleChange} />
             ) : (
-                <LangSwitchDesktop lang={lang} handleChange={handleChange} />
+                <LangSwitchDesktop handleChange={handleChange} />
             )}
         </>
     );

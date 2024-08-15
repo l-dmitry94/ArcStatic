@@ -8,7 +8,7 @@ export interface ContactsPageProps {}
 
 const ContactsPage = ({}: ContactsPageProps) => {
     return (
-        <div className={styles.wrapper}>
+        <div id="contact" className={styles.wrapper}>
             <div className={styles.titleWrapper}>
                 <Image src={icon} alt={'icon'} className="h-[84px] w-[58px]" />
                 <h2 className={styles.title}>Contact us</h2>

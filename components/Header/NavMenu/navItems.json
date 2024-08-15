@@ -1,22 +1,22 @@
 [
     {
-        "label": "About us",
+        "label": "menu1",
         "href": "#"
     },
     {
-        "label": "Services",
+        "label": "menu2",
         "href": "#"
     },
     {
-        "label": "Cases",
+        "label": "menu3",
         "href": "#"
     },
     {
-        "label": "Team",
+        "label": "menu4",
         "href": "#"
     },
     {
-        "label": "Contacts",
-        "href": "#"
+        "label": "menu5",
+        "href": "#contact"
     }
 ]

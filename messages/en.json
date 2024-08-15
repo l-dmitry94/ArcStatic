@@ -1,0 +1,21 @@
+{
+    "Header": {
+        "menu1": "About us",
+        "menu2": "Services",
+        "menu3": "Cases",
+        "menu4": "Team",
+        "menu5": "Contacts"
+    },
+    "Contacts": {
+        "form_name": "Name",
+        "form_number": "Number",
+        "form_email": "Email",
+        "form_message": "Message",
+        "btn_send": "Send message",
+        "or": "or",
+        "tg_bot": "Telegram bot",
+        "title": "Contact us",
+        "email": "Email",
+        "phone": "Phone"
+    }
+}
