@@ -5,12 +5,13 @@ import logo from '../../public/icons/logo.svg';
 import Container from '../Container';
 import NavMenu from './NavMenu';
 import BurgerMenu from './BurgerMenu'; // Підключаємо клієнтський компонент
+import Link from 'next/link';
 
 const Header: FC = () => {
     return (
         <header className={scss.header}>
             <Container>
-                <a href="/" aria-label="Link to home page">
+                <Link href="/" aria-label="Link to home page">
                     <Image
                         src={logo}
                         alt="Logo"
@@ -19,7 +20,7 @@ const Header: FC = () => {
                         blurDataURL="data:..."
                         placeholder="blur"
                     />
-                </a>
+                </Link>
                 <NavMenu />
                 <BurgerMenu /> {/* Рендеримо бургер-меню, яке є клієнтським */}
             </Container>

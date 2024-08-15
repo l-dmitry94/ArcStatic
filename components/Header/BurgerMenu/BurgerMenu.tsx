@@ -7,39 +7,45 @@ import scss from './BurgerMenu.module.scss';
 import burgerMenu from '../../../public/icons/burger.svg';
 import closeBtn from '../../../public/icons/close.svg';
 import NavMenu from '../NavMenu/NavMenu';
+import { useMedia } from '@/hooks/useMedia';
 
 const BurgerMenu: FC = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
-    const [isMobile, setIsMobile] = useState<boolean>(false);
+    const { isNotebook, isDesktop } = useMedia();
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 1280);
-        };
-
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        setIsClient(true);
     }, []);
+
+    useEffect(() => {
+        if (isNotebook) {
+            setIsDrawerOpen(false);
+        }
+    }, [isNotebook]);
 
     const toggleDrawer = () => {
         setIsDrawerOpen(!isDrawerOpen);
     };
 
-    if (!isMobile) return null; // Повертаємо null, якщо це не мобільний пристрій
+    if (!isClient) {
+        return null;
+    }
 
     return (
         <>
-            <Button onClick={toggleDrawer}>
-                <Image
-                    src={burgerMenu}
-                    alt="Burger Menu"
-                    className={scss.imgBurger}
-                    priority
-                    blurDataURL="data:..."
-                    placeholder="blur"
-                />
-            </Button>
+            {!isNotebook && !isDesktop && (
+                <Button onClick={toggleDrawer}>
+                    <Image
+                        src={burgerMenu}
+                        alt="Burger Menu"
+                        className={scss.imgBurger}
+                        priority
+                        blurDataURL="data:..."
+                        placeholder="blur"
+                    />
+                </Button>
+            )}
             <Drawer
                 open={isDrawerOpen}
                 anchor={'right'}
