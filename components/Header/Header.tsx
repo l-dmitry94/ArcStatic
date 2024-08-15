@@ -4,7 +4,8 @@ import Image from 'next/image';
 import logo from '../../public/icons/logo.svg';
 import Container from '../Container';
 import NavMenu from './NavMenu';
-import BurgerMenu from './BurgerMenu'; // Підключаємо клієнтський компонент
+import BurgerMenu from './BurgerMenu';
+import LangSwitch from './LangSwitch';
 import Link from 'next/link';
 
 const Header: FC = () => {
@@ -22,7 +23,10 @@ const Header: FC = () => {
                     />
                 </Link>
                 <NavMenu />
-                <BurgerMenu /> {/* Рендеримо бургер-меню, яке є клієнтським */}
+                <div className={scss.boxLangAndBurger}>
+                    <LangSwitch />
+                    <BurgerMenu />
+                </div>
             </Container>
         </header>
     );

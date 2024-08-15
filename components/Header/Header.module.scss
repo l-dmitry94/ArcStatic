@@ -8,7 +8,11 @@
     }
 
     & div {
-        @apply flex size-full items-center justify-between;
+        @apply flex items-center justify-between;
+
+        .boxLangAndBurger {
+            @apply flex justify-end gap-5;
+        }
     }
 }
 
@@ -18,4 +22,8 @@
     @include media-rules(notebook) {
         @apply h-32 w-32;
     }
+}
+
+.boxLangAndBurger {
+    @apply flex gap-3;
 }
