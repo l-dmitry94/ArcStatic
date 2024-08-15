@@ -1,12 +1,17 @@
 .navMenu {
     @apply text-center font-riviera text-base;
 
-    & ul li a {
-        @apply size-4 text-xl font-medium hover:text-2xl;
+    & ul li {
+        @apply text-xl font-medium transition-transform duration-200 ease-in-out;
+    }
+
+    & ul li:hover,
+    & ul li.active {
+        @apply scale-125;
     }
 
     &.visible ul {
-        @apply hover:via-violet focus:via-violet flex h-screen w-screen flex-col gap-5 p-12 text-primary;
+        @apply flex h-screen w-screen flex-col gap-5 p-12 text-primary hover:via-violet focus:via-violet;
     }
 }
 
