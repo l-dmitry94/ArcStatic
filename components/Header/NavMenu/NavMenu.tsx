@@ -1,6 +1,10 @@
 import React from 'react';
 import scss from './NavMenu.module.scss';
-import { NavMenuProps } from './NavMenu.types';
+import { NavMenuProps, NavItem } from './NavMenu.types';
+import items from './navItems.json';
+import NavLink from 'next/link';
+
+const navItems: NavItem[] = items;
 
 const NavMenu: React.FC<NavMenuProps> = ({ isVisible, toggleDrawer }) => {
     return (
@@ -10,21 +14,11 @@ const NavMenu: React.FC<NavMenuProps> = ({ isVisible, toggleDrawer }) => {
             onClick={toggleDrawer}
         >
             <ul className={scss.navList}>
-                <li>
-                    <a href="#">About us</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Cases</a>
-                </li>
-                <li>
-                    <a href="#">Team</a>
-                </li>
-                <li>
-                    <a href="#">Contacts</a>
-                </li>
+                {navItems.map((item, index) => (
+                    <li key={index}>
+                        <NavLink href={item.href}>{item.label}</NavLink>
+                    </li>
+                ))}
             </ul>
         </nav>
     );
