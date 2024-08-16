@@ -10,6 +10,7 @@ import {
     numberPattern,
 } from '@/components/ContactsPage/constants';
 import useTranslations from '@/hooks/useTranslate';
+import { sendTelegramMessage } from '@/services/telegramSendMessages';
 
 interface FormValues {
     name: string;
@@ -26,8 +27,8 @@ const Form = () => {
         formState: { errors },
     } = useForm<FormValues>();
 
-    const onSubmit: SubmitHandler<FormValues> = (data) => {
-        console.log(data);
+    const onSubmit: SubmitHandler<FormValues> = async (data) => {
+        await sendTelegramMessage(data);
     };
 
     return (

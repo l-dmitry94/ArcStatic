@@ -6,6 +6,7 @@ import '../../styles/global.scss';
 import { NextIntlClientProvider } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
+import { ToastContainer } from 'react-toastify';
 import enMessages from '../../messages/en.json';
 import uaMessages from '../../messages/ua.json';
 
@@ -51,6 +52,7 @@ const RootLayout: FC<IRootLayout> = ({ children, params }) => {
                     <Header />
                     {children}
                     <Footer />
+                    <ToastContainer />
                 </NextIntlClientProvider>
             </body>
         </html>
