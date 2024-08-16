@@ -17,7 +17,7 @@
 }
 
 .titleWrapper {
-    @apply flex hidden items-end justify-center gap-[8px] pb-[40px];
+    @apply flex items-end justify-center gap-[8px] pb-[40px];
 
     @include media-rules(desktop) {
         @apply flex;
