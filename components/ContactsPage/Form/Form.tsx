@@ -17,66 +17,59 @@ interface FormValues {
     message: string;
 }
 
-export interface FormProps {}
-
-export const Form = ({}: FormProps) => {
+const Form = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm<FormValues>();
 
-    const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
+    const onSubmit: SubmitHandler<FormValues> = (data) => {
         console.log(data);
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <CustomInput
-                id={'name'}
-                label={'Name'}
-                register={register}
-                errors={errors}
-            />
-            <CustomInput
-                label={'Number'}
-                id={'number'}
-                register={register}
-                errors={errors}
-                pattern={numberPattern}
-            />
-            <CustomInput
-                label={'Email'}
-                id={'email'}
-                errors={errors}
-                register={register}
-                pattern={emailPattern}
-            />
-            <CustomInput
-                label={'Message'}
-                id={'message'}
-                register={register}
-                errors={errors}
-            />
-            {/*<div className={styles.fieldWrapper}>*/}
-            {/*    <label className={styles.label} htmlFor="message">*/}
-            {/*        Message*/}
-            {/*    </label>*/}
-            {/*    <textarea*/}
-            {/*        className={styles.textArea}*/}
-            {/*        {...register('message', { required: 'Email is required' })}*/}
-            {/*    />*/}
-            {/*</div>*/}
-            <div className={styles.buttonWrapper}>
-                <Button text={'Send message'} buttonType={ButtonType.DEFAULT} />
-                <p className="py-[10px] text-center text-[24px] font-thin">
-                    or
-                </p>
-                <Button
-                    text={'Telegram bot'}
-                    buttonType={ButtonType.SECONDARY}
+        <div className={styles.wrapper}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <CustomInput
+                    id={'name'}
+                    label={'Name'}
+                    register={register}
+                    errors={errors}
                 />
-            </div>
-        </form>
+                <CustomInput
+                    label={'Number'}
+                    id={'number'}
+                    register={register}
+                    errors={errors}
+                    pattern={numberPattern}
+                />
+                <CustomInput
+                    label={'Email'}
+                    id={'email'}
+                    errors={errors}
+                    register={register}
+                    pattern={emailPattern}
+                />
+                <CustomInput
+                    label={'Message'}
+                    id={'message'}
+                    register={register}
+                    errors={errors}
+                />
+                <div className={styles.buttonWrapper}>
+                    <Button
+                        text={'Send message'}
+                        buttonType={ButtonType.DEFAULT}
+                    />
+                    <p className="py-[10px] text-center text-[24px] font-thin">
+                        or
+                    </p>
+                </div>
+            </form>
+            <Button text={'Telegram bot'} buttonType={ButtonType.SECONDARY} />
+        </div>
     );
 };
+
+export default Form;
