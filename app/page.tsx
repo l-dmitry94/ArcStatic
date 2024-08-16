@@ -1,4 +1,4 @@
-import ContactsPage from '@/components/ContactsPage/ContactsPage';
+import { ContactsPage } from '@/components/ContactsPage/ContactsPage';
 import Container from '../components/Container';
 import Hero from '../components/Hero';
 
