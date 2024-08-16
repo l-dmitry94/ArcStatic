@@ -1,17 +1,21 @@
 @import '/styles/mixins';
 
 .hero {
-    @apply py-16 bg-cover bg-no-repeat bg-center bg-[url('/images/blot4x.png')];
+    @apply py-16 bg-cover bg-no-repeat bg-center;
 
     @include media-rules(mobile) {
-        @apply bg-top bg-contain;
+        @apply bg-top bg-contain bg-[url('/images/blot4xmobile.png')];
+    }
+
+    @include media-rules(desktop) {
+        @apply bg-top bg-contain bg-[url('/images/blot4x.png')];
     }
 
     &_container {
         @apply flex flex-col gap-5;
 
         @include media-rules(desktop) {
-            @apply items-start flex-row justify-between;
+            @apply items-start flex-row justify-between pt-[180px] pb-[100px];
         }
     }
 
@@ -52,12 +56,24 @@
         }
     }
 
+    .inline_container {
+        @apply flex;
+
+        @include media-rules(mobile) {
+                @apply flex-col;
+            }
+
+        @include media-rules(desktop) {
+            flex-direction: row;
+            gap: 40px;
+        }
+    }
+
     &_buttonContainer {
         @apply text-center;
 
         @include media-rules(desktop) {
             @apply text-right mt-auto;
-            
         }
     }
 }

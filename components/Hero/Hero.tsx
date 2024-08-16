@@ -18,9 +18,10 @@ const Hero: React.FC = () => {
                         <br />
                         IN NAVIGATION
                         <br />
-                        WEB
-                        <br />
-                        DEVELOPMENT
+                        <div className={styles.inline_container}>
+                            <span>WEB</span>
+                            <span>DEVELOPMENT</span>
+                        </div>
                     </h1>
                     <p>
                         UX/UI design and platform integration. We bring your
