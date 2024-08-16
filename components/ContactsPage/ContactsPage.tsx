@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './contacts-page.module.scss';
 import Form from '@/components/ContactsPage/Form/Form';
 import icon from '../../public/icons/contact-icon.svg';
@@ -6,7 +7,7 @@ import ContactsInfo from '@/components/ContactsPage/ContactsInfo/ContactsInfo';
 
 export interface ContactsPageProps {}
 
-const ContactsPage = ({}: ContactsPageProps) => {
+export const ContactsPage = ({}: ContactsPageProps) => {
     return (
         <div id="contact" className={styles.wrapper}>
             <div className={styles.titleWrapper}>
@@ -16,10 +17,7 @@ const ContactsPage = ({}: ContactsPageProps) => {
 
             <div className={styles.infoWrapper}>
                 <Form />
-                <ContactsInfo />
             </div>
         </div>
     );
 };
-
-export default ContactsPage;
