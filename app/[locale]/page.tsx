@@ -1,6 +1,6 @@
-import { ContactsPage } from '@/components/ContactsPage/ContactsPage';
-import Container from '../components/Container';
-import Hero from '../components/Hero';
+import ContactsPage from '@/components/ContactsPage/ContactsPage';
+import Container from '../../components/Container';
+import Hero from '../../components/Hero';
 
 const Home = () => {
     return (

@@ -1,0 +1,7 @@
+.btnLang {
+    @apply m-4 size-5 font-riviera font-medium text-primary;
+
+    &.active {
+        @apply text-ligthViolet;
+    }
+}

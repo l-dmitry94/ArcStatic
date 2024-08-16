@@ -9,6 +9,7 @@ import {
     emailPattern,
     numberPattern,
 } from '@/components/ContactsPage/constants';
+import useTranslations from '@/hooks/useTranslate';
 
 interface FormValues {
     name: string;
@@ -17,66 +18,60 @@ interface FormValues {
     message: string;
 }
 
-export interface FormProps {}
-
-export const Form = ({}: FormProps) => {
+const Form = () => {
+    const t = useTranslations('Contacts');
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm<FormValues>();
 
-    const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
+    const onSubmit: SubmitHandler<FormValues> = (data) => {
         console.log(data);
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <CustomInput
-                id={'name'}
-                label={'Name'}
-                register={register}
-                errors={errors}
-            />
-            <CustomInput
-                label={'Number'}
-                id={'number'}
-                register={register}
-                errors={errors}
-                pattern={numberPattern}
-            />
-            <CustomInput
-                label={'Email'}
-                id={'email'}
-                errors={errors}
-                register={register}
-                pattern={emailPattern}
-            />
-            <CustomInput
-                label={'Message'}
-                id={'message'}
-                register={register}
-                errors={errors}
-            />
-            {/*<div className={styles.fieldWrapper}>*/}
-            {/*    <label className={styles.label} htmlFor="message">*/}
-            {/*        Message*/}
-            {/*    </label>*/}
-            {/*    <textarea*/}
-            {/*        className={styles.textArea}*/}
-            {/*        {...register('message', { required: 'Email is required' })}*/}
-            {/*    />*/}
-            {/*</div>*/}
-            <div className={styles.buttonWrapper}>
-                <Button text={'Send message'} buttonType={ButtonType.DEFAULT} />
-                <p className="py-[10px] text-center text-[24px] font-thin">
-                    or
-                </p>
-                <Button
-                    text={'Telegram bot'}
-                    buttonType={ButtonType.SECONDARY}
+        <div className={styles.wrapper}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <CustomInput
+                    id={'name'}
+                    label={t('form_name')}
+                    register={register}
+                    errors={errors}
                 />
-            </div>
-        </form>
+                <CustomInput
+                    label={t('form_number')}
+                    id={'number'}
+                    register={register}
+                    errors={errors}
+                    pattern={numberPattern}
+                />
+                <CustomInput
+                    label={t('form_email')}
+                    id={'email'}
+                    errors={errors}
+                    register={register}
+                    pattern={emailPattern}
+                />
+                <CustomInput
+                    label={t('form_message')}
+                    id={'message'}
+                    register={register}
+                    errors={errors}
+                />
+                <div className={styles.buttonWrapper}>
+                    <Button
+                        text={t('btn_send')}
+                        buttonType={ButtonType.DEFAULT}
+                    />
+                    <p className="py-[10px] text-center text-[24px] font-thin">
+                        {t('or')}
+                    </p>
+                </div>
+            </form>
+            <Button text={t('tg_bot')} buttonType={ButtonType.SECONDARY} />
+        </div>
     );
 };
+
+export default Form;

@@ -1,0 +1,15 @@
+@import '@/styles/mixins';
+
+.imgBurger {
+    @apply h-6 w-10;
+}
+.btnClose {
+    @apply absolute left-[300px] top-3 h-10 w-10 bg-transparent;
+
+    @include media-rules(tablet) {
+        @apply left-[700px];
+    }
+}
+.svgClose {
+    @apply h-6 w-6 fill-violet;
+}

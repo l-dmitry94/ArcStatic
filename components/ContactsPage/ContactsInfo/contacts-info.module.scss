@@ -1,0 +1,36 @@
+@import 'styles/mixins.scss';
+
+.wrapper {
+    @apply h-[500px];
+    background-image: url('/images/contact_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @apply flex flex-col items-start gap-[10px] font-light uppercase leading-[1.4] tracking-[0.05em] text-white;
+
+    @include media-rules(desktop) {
+        background-image: url('/images/contact_bg_desktop.png');
+        background-size: contain;
+        @apply h-[650px] w-[732px];
+    }
+}
+
+.titleWrapper {
+    @apply flex items-end justify-center gap-[8px] pb-[40px];
+
+    @include media-rules(desktop) {
+        @apply flex;
+    }
+}
+
+.title {
+    @apply pb-[18px] text-center text-[48px] font-thin uppercase leading-[1.5] tracking-[0.04em] text-white;
+}
+
+.span {
+    @apply ms-[43px];
+}
+.phone {
+    @apply ms-[33px];
+}
