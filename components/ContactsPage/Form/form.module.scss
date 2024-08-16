@@ -1,23 +1,12 @@
 @import 'styles/mixins';
 
-.wrapper {
-  @apply pb-[58px];
-
-  @include media-rules(desktop) {
-    @apply w-[532px];
-  }
-}
-
 .input {
   @apply bg-transparent  outline-none border-b-[0.5px] border-white w-full opacity-100 py-[5px] px-[5px] mb-[40px];
-
-
 }
 
-//
-//.textArea {
-//  @apply bg-transparent outline-none border-b-[0.5px] border-white w-full resize-none pt-[5px] px-[5px] h-[70px];
-//}
+.textArea {
+  @apply bg-transparent outline-none border-b-[0.5px] border-white w-full resize-none pt-[5px] px-[5px] h-[70px];
+}
 
 .fieldWrapper {
   @apply relative;

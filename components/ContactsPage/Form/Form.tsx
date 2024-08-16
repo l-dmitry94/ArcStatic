@@ -26,7 +26,7 @@ const Form = () => {
         formState: { errors },
     } = useForm<FormValues>();
 
-    const onSubmit: SubmitHandler<FormValues> = (data) => {
+    const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
         console.log(data);
     };
 

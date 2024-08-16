@@ -10,8 +10,6 @@ const config: Config = {
             colors: {
                 primary: '#fdfdfd',
                 secondary: '#b773ce',
-                violet: '#5A2E70',
-                ligthViolet: '#B069C7',
             },
             backgroundImage: {
                 linear: 'linear-gradient(63deg, #000 49.82%, #2442ab 100%)',
