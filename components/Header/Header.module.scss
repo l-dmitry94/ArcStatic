@@ -1,11 +1,11 @@
 @import '@/styles/mixins';
 
 .header {
-    @apply pb-5 pt-5 text-base;
+    @apply text-base fixed top-0 left-0 right-0 z-[1000];
 
-    @include media-rules(notebook) {
-        @apply pb-10 pt-10;
-    }
+    // @include media-rules(notebook) {
+    //     @apply pb-10 pt-10;
+    // }
 
     & div {
         @apply flex items-center justify-between;
