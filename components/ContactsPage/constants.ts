@@ -9,6 +9,6 @@ export const emailPattern = {
 };
 
 export const numberPattern = {
-    value: /^\+?[1-9]\d{1,14}$/,
+    value: /^(\+?38)?0\d{9}$/,
     message: 'Invalid phone number',
 };
