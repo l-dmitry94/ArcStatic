@@ -17,6 +17,10 @@ const config: Config = {
                 linear: 'linear-gradient(63deg, #000 49.82%, #2442ab 100%)',
                 buttonBG:
                     'linear-gradient(200deg, #b069c7 21.99%, #5a2e70 60.72%, #1f1027 91.9%)',
+                projectBg:
+                    'linear-gradient(180deg, #000 3.66%, rgba(0, 0, 0, 0) 60.48%, #000 100%)',
+                projectLink:
+                    'linear-gradient(180deg, #b069c7 0%, #dfabf2 100%)',
             },
             lineHeight: {
                 tight: '1.3',

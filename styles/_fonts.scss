@@ -1,35 +1,53 @@
 @font-face {
     font-family: 'AltRiviera';
-    src: url('/fonts/ALTRiviera-Extralight.otf') format('otf');
+    src:
+        url('/fonts/ALTRiviera-Extralight.ttf') format('truetype'),
+        url('/fonts/ALTRiviera-Extralight.woff') format('woff'),
+        url('/fonts/ALTRiviera-Extralight.woff2') format('woff2');
     font-weight: 200;
 }
 
 @font-face {
     font-family: 'AltRiviera';
-    src: url('/fonts/ALTRiviera-Light.otf') format('otf');
+    src:
+        url('/fonts/ALTRiviera-Light.ttf') format('truetype'),
+        url('/fonts/ALTRiviera-Light.woff') format('woff'),
+        url('/fonts/ALTRiviera-Light.woff2') format('woff2');
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'AltRiviera';
-    src: url('/fonts/ALTRiviera-Regular.otf') format('otf');
+    src:
+        url('/fonts/ALTRiviera-Regular.ttf') format('truetype'),
+        url('/fonts/ALTRiviera-Regular.woff') format('woff'),
+        url('/fonts/ALTRiviera-Regular.woff2') format('woff2');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'AltRiviera';
-    src: url('/fonts/ALTRiviera-Medium.otf') format('otf');
+    src:
+        url('/fonts/ALTRiviera-Medium.ttf') format('truetype'),
+        url('/fonts/ALTRiviera-Medium.woff') format('woff'),
+        url('/fonts/ALTRiviera-Medium.woff2') format('woff2');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'AltRiviera';
-    src: url('/fonts/ALTRiviera-Bold.otf') format('otf');
+    src:
+        url('/fonts/ALTRiviera-Bold.ttf') format('truetype'),
+        url('/fonts/ALTRiviera-Bold.woff') format('woff'),
+        url('/fonts/ALTRiviera-Bold.woff2') format('woff2');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'AltRiviera';
-    src: url('/fonts/ALTRiviera-Extrabold.otf') format('otf');
+    src:
+        url('/fonts/ALTRiviera-Extrabold.ttf') format('truetype'),
+        url('/fonts/ALTRiviera-Extrabold.woff') format('woff'),
+        url('/fonts/ALTRiviera-Extrabold.woff2') format('woff2');
     font-weight: 800;
 }
