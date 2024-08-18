@@ -1,0 +1,9 @@
+@import 'styles/mixins.scss';
+
+.projectsList {
+    @apply flex flex-col gap-[60px];
+
+    @include media-rules(desktop) {
+        @apply gap-[100px]
+    }
+}

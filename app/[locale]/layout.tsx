@@ -1,14 +1,15 @@
 import { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { useLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { ToastContainer } from 'react-toastify';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import '../../styles/global.scss';
 import { NextIntlClientProvider } from 'next-intl';
-import { useLocale } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { ToastContainer } from 'react-toastify';
 import enMessages from '../../messages/en.json';
 import uaMessages from '../../messages/ua.json';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Define a type for the messages
 type Messages = {
