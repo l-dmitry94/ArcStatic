@@ -1,10 +1,7 @@
 @import '@/styles/mixins';
 
 .header {
-    @apply fixed left-0 right-0 top-0 z-[1000] text-base;
-    backdrop-filter: blur(10px); /* ефект блюру */
-    z-index: 1000; /* щоб хедер був поверх іншого контенту */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    @apply fixed left-0 right-0 top-0 z-[1000] text-base shadow-[0_2px_10px_rgba(0,0,0,0.1)] backdrop-blur-[10px];
 
     & div {
         @apply flex items-center justify-between;
