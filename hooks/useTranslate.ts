@@ -1,6 +1,11 @@
 import { useTranslations as useNextIntlTranslations } from 'next-intl';
 
-type TranslationNamespace = 'Header' | 'Footer' | 'Contacts' | 'HomePage'; // додавати розділи зі словника
+type TranslationNamespace =
+    | 'Header'
+    | 'Footer'
+    | 'Contacts'
+    | 'Hero'
+    | 'Proposal'; // додавати розділи зі словника
 
 const useTranslations = (namespace: TranslationNamespace) => {
     // при виклику передати розділ для секції

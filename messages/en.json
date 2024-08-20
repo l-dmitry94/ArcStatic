@@ -6,6 +6,20 @@
         "menu4": "Team",
         "menu5": "Contacts"
     },
+    "Hero": {
+        "text1": "Our web development team helps businesses grow an succeed in the online space by providing website design and maintenance,",
+        "title1": "EXPERT",
+        "title2": "IN NAVIGATION",
+        "title3": "WEB",
+        "title4": "DEVELOPMENT",
+        "text2": "UX/UI design and platform integration. We bring your ideas to life by providing high functionality, usability and state-of-the-art technology.",
+        "btn_text": "book a consultation"
+    },
+    "Proposal": {
+        "title": "Let`s make things happen",
+        "text": " Contact us today to learn more about how our development services can help your business grow and succeed online.",
+        "btn_text": "SET YOUR PROPOSAL"
+    },
     "Contacts": {
         "form_name": "Name",
         "form_number": "Number",

@@ -5,7 +5,7 @@ import scss from './Projects.module.scss';
 
 const Projects = () => {
     return (
-        <section className={scss.section}>
+        <section id="projects" className={scss.section}>
             <ProjectsHead />
             <ProjectsList projects={projectsData} />
         </section>

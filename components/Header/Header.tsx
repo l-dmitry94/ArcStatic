@@ -1,7 +1,7 @@
 import scss from './Header.module.scss';
 import React, { FC } from 'react';
 import Image from 'next/image';
-import logo from '../../public/icons/logo.svg';
+import logo from '../../public/icons/logoV4.svg';
 import Container from '../Container';
 import NavMenu from './NavMenu';
 import BurgerMenu from './BurgerMenu';
