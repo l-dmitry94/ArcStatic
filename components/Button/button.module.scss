@@ -1,17 +1,32 @@
 @import 'styles/mixins.scss';
 
 .button {
-  @apply inline-block py-[19px] w-full m-[4px] rounded-[20px] font-extrabold text-[20px] leading-[1.1] tracking-[0.05em] uppercase;
+  @apply inline-block py-[19px] w-full m-[4px] rounded-[20px] font-extrabold text-[20px] leading-[1.1] tracking-[0.05em] uppercase ;
 
   @include media-rules(desktop) {
     @apply py-[32px] px-[41px] w-full;
   }
 
-  &--default {
-    @apply bg-buttonBG;
+  &--default {;
+    background-size: 200% 200%;
+    background-position: left center;
+    @apply bg-buttonBG transition-[background-position] duration-300 ease-in-out;
   }
 
   &--custom {
     @apply bg-transparent border-[1px] border-secondary;
+    background-size: 200% 200%;
+    background-position: left center;
+    transition: background 0.3s ease-in-out, background-position 0.3s ease-in-out;
   }
+}
+
+.button--default:hover {
+  background-position: right center;
+}
+
+.button--custom:hover {
+  @apply bg-buttonBG;
+  background-position: right center;
+
 }
