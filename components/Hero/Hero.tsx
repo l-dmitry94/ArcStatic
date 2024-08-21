@@ -2,36 +2,30 @@ import React from 'react';
 import Button from '@/components/Button/Button';
 import { ButtonType } from '@/components/Button/constants';
 import styles from './Hero.module.scss';
+import useTranslations from '@/hooks/useTranslate';
 
 const Hero: React.FC = () => {
+    const t = useTranslations('Hero');
     return (
         <section className={styles.hero}>
             <div className={styles.hero_container}>
                 <div className={styles.hero_text}>
-                    <p>
-                        Our web development team helps businesses grow and
-                        succeed in the online space by providing website design
-                        and maintenance,
-                    </p>
+                    <p>{t('text1')}</p>
                     <h1 className={styles.hero_title}>
-                        EXPERT
+                        {t('title1')}
                         <br />
-                        IN NAVIGATION
+                        {t('title2')}
                         <br />
                         <div className={styles.inline_container}>
-                            <span>WEB</span>
-                            <span>DEVELOPMENT</span>
+                            <span>{t('title3')}</span>
+                            <span>{t('title4')}</span>
                         </div>
                     </h1>
-                    <p>
-                        UX/UI design and platform integration. We bring your
-                        ideas to life by providing high functionality, usability
-                        and state-of-the-art technology.
-                    </p>
+                    <p>{t('text2')}</p>
                 </div>
                 <div className={styles.hero_buttonContainer}>
                     <Button
-                        text="book a consultation"
+                        text={t('btn_text')}
                         buttonType={ButtonType.DEFAULT}
                     />
                 </div>
