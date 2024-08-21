@@ -14,7 +14,7 @@ const ContactsInfo = ({}: ContactsInfoProps) => {
                 <h2 className={styles.title}>{t('title')}</h2>
             </div>
             <p className={styles.description}>
-                {t('email')}:{' '}
+                {t('email')}:
                 <span className={styles.span}>arcstatic@gmail.com</span>
             </p>
             <p className={styles.description}>
