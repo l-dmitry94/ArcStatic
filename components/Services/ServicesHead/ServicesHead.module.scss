@@ -1,0 +1,41 @@
+@import 'styles/mixins.scss';
+
+.head {
+    @apply mb-10 ;
+
+    @include media-rules(desktop) {
+        @apply flex flex-row mb-[100px] mt-[80px] ml-[0px] mr-[290px] max-w-[1071px] gap-[326px] ;
+    }
+}
+
+.titleWrapper {
+    @apply mb-5 flex justify-center gap-[8px] ;
+
+    @include media-rules(desktop) {
+        @apply w-[354px] h-[114px]  justify-start gap-[28px] mb-[0px];
+    }
+}
+
+.titleIcon {
+    @apply h-[84px] w-[58px];
+
+    @include media-rules(desktop) {
+        @apply h-[114px] w-[78px];
+    }
+}
+
+.title {
+    @apply pb-[28px] pt-[20px] text-2xl font-light leading-normal tracking-[0.04em];
+
+    @include media-rules(desktop) {
+        @apply  pb-[21px] pt-[21px] content-center font-light text-[48px] leading-[150%] tracking-wider text-[var(--51)] ;
+    }
+}
+
+.description {
+    @apply text-justify text-base content-center font-light leading-[1.3];
+
+    @include media-rules(desktop) {
+        @apply text-xl leading-[1.3] w-[391px];
+    }
+}

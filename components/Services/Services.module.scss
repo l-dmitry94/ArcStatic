@@ -1,0 +1,8 @@
+@import 'styles/mixins.scss';
+.section {
+    @apply py-[50px];
+
+     @include media-rules(desktop) {
+        @apply  mb-[100px];
+    }
+}

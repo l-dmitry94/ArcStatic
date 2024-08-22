@@ -1,0 +1,73 @@
+@import 'styles/mixins';
+
+.servicessItem {
+    @apply flex h-[556px] w-[335px] flex-col gap-[18px];
+
+    &:nth-child(2) .imageWrapper::after {
+        @apply bg-none;
+    }
+
+    @include media-rules(desktop) {
+        @apply h-[492px] w-[680px] flex-row gap-[0px];
+    }
+
+    // &:nth-child(even) {
+    //     @include media-rules(desktop) {
+    //         @apply flex-row-reverse;
+    //     }
+    // }
+
+    &:nth-child(-n+2) {
+        @include media-rules(desktop) {
+            @apply flex-row-reverse;
+        }
+    }
+}
+
+.imageWrapper {
+    @apply relative;
+
+    &::before {
+        content: '';
+        @apply absolute inset-0 bg-white opacity-20 blur-[54px] filter;
+        z-index: -1; /* Задає фон за контентом */
+    }
+
+    &::after {
+        @apply absolute left-0 top-0 h-full w-full;
+    }
+    @include media-rules(desktop) {
+        @apply relative h-[492px] w-[382px];
+    }
+}
+
+.image {
+    @apply relative left-[109px] h-[206px] w-[206px];
+
+    @include media-rules(desktop) {
+        @apply relative left-[136px] h-[246px] w-[246px] max-w-[680px];
+    }
+}
+
+.info {
+    @include media-rules(desktop) {
+        @apply max-w-[298px] flex;
+    }
+}
+
+.title {
+    @apply mb-3 text-center text-lg font-light leading-[1.44] tracking-[0.1em];
+
+    @include media-rules(desktop) {
+        @apply text-2xl text-[24px] font-light leading-[1.08] tracking-[0.1em] flex flex-row items-end  mb-[0] text-start;
+        flex-grow: 1;
+    }
+}
+
+.description {
+    @apply px-[20px] pb-[81px] pt-[60px] text-justify text-[16px] font-light leading-[130%] text-[var(--1)];
+
+    @include media-rules(desktop) {
+        @apply pb-[44px] pl-[42px] pr-[42px] pt-[46px] text-[20px] text-xl font-light leading-[1.3];
+    }
+}

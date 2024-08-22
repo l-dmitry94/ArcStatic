@@ -1,0 +1,12 @@
+@import 'styles/mixins.scss';
+
+.servicesList {
+    @apply flex flex-col gap-[40px];
+
+
+
+
+    @include media-rules(desktop) {
+        @apply gap-y-[100px] flex-row flex-wrap gap-[0px];
+    }
+}
