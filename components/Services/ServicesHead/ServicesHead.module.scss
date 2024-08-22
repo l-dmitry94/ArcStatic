@@ -4,7 +4,7 @@
     @apply mb-10 ;
 
     @include media-rules(desktop) {
-        @apply flex flex-row mb-[100px] mt-[80px] ml-[0px] mr-[290px] max-w-[1071px] gap-[326px];
+        @apply flex flex-row mb-[100px] mt-[80px] ml-[0px] mr-[290px] max-w-[1071px] gap-[326px] ;
     }
 }
 

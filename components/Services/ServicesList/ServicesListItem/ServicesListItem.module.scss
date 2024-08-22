@@ -51,7 +51,7 @@
 
 .info {
     @include media-rules(desktop) {
-        @apply max-w-[298px] items-end;
+        @apply max-w-[298px] flex;
     }
 }
 
@@ -59,7 +59,8 @@
     @apply mb-3 text-center text-lg font-light leading-[1.44] tracking-[0.1em];
 
     @include media-rules(desktop) {
-        @apply mb-10 text-2xl text-[24px] font-light leading-[1.08] tracking-[0.1em];
+        @apply text-2xl text-[24px] font-light leading-[1.08] tracking-[0.1em] flex flex-row items-end  mb-[0] text-start;
+        flex-grow: 1;
     }
 }
 

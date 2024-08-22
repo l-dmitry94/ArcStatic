@@ -3,6 +3,6 @@
     @apply py-[50px];
 
      @include media-rules(desktop) {
-        @apply mt-[100px] mb-[100px];
+        @apply  mb-[100px];
     }
 }
