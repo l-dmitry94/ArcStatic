@@ -1,11 +1,7 @@
 @import '@/styles/mixins';
 
 .header {
-    @apply text-base fixed top-0 left-0 right-0 z-[1000];
-
-    // @include media-rules(notebook) {
-    //     @apply pb-10 pt-10;
-    // }
+    @apply fixed left-0 right-0 top-0 z-[1000] text-base shadow-[0_2px_10px_rgba(0,0,0,0.1)] backdrop-blur-[10px];
 
     & div {
         @apply flex items-center justify-between;

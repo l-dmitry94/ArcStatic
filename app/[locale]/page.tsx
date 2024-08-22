@@ -4,6 +4,7 @@ import Hero from '../../components/Hero';
 import Projects from '@/components/Projects';
 import Proposal from '@/components/Proposal/Proposal';
 import Services from '@/components/Services';
+import TeamPage from '@/components/TeamPage/TeamPage';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                     <Services />
                     <Proposal />
                     <Projects />
+                    <TeamPage />
                     <ContactsPage />
                 </main>
             </Container>
