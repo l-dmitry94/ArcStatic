@@ -36,7 +36,6 @@ interface IRootLayout {
 const RootLayout: FC<IRootLayout> = ({ children, params }) => {
     const locale = useLocale();
 
-    // Ensure the locale is valid or fall back to a default
     if (params.locale !== locale) {
         notFound();
     }

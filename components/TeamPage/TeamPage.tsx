@@ -18,7 +18,7 @@ export interface TeamPageProps {}
 
 const TeamPage = ({}: TeamPageProps) => {
     return (
-        <div className="relative">
+        <div className="relative" id="team">
             <div className={styles.wrapper}>
                 <div className={styles.headWrapper}>
                     <div className={styles.titleWrapper}>
