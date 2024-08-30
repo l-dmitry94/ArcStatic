@@ -1,6 +1,6 @@
 import styles from './Footer.module.scss';
 
-import Logo from '../../public/icons/logo.svg';
+import Logo from '../../public/icons/logoV4.svg';
 import Image from 'next/image';
 import Container from '@/components/Container';
 import Link from 'next/link';
@@ -11,7 +11,7 @@ const Footer = () => {
             <Container>
                 <div className="flex items-center justify-between pb-[40px] notebook:p-0">
                     <Image
-                        className="hidden notebook:block"
+                        className="hidden h-32 w-32 notebook:block"
                         src={Logo}
                         alt="ArcStaticLogo"
                     />

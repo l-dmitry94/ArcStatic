@@ -1,9 +1,5 @@
 [
     {
-        "label": "menu1",
-        "href": "#"
-    },
-    {
         "label": "menu2",
         "href": "#proposal"
     },
@@ -13,7 +9,7 @@
     },
     {
         "label": "menu4",
-        "href": "#"
+        "href": "#team"
     },
     {
         "label": "menu5",
